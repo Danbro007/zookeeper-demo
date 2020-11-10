@@ -1,8 +1,9 @@
+package javaApiTest;
+
 import org.apache.zookeeper.AsyncCallback;
 import org.apache.zookeeper.KeeperException;
 import org.apache.zookeeper.Watcher;
 import org.apache.zookeeper.ZooKeeper;
-import org.apache.zookeeper.data.Stat;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -11,12 +12,12 @@ import java.io.IOException;
 import java.util.concurrent.CountDownLatch;
 
 /**
- * @Classname ZkSet
+ * @Classname javaApiTest.ZkDelete
  * @Description TODO
- * @Date 2020/11/9 12:42
+ * @Date 2020/11/9 12:51
  * @Author Danrbo
  */
-public class ZkSet {
+public class ZkDelete {
     private final static String ZOOKEEPER_ADDR = "192.168.0.109:2182";
     private final static int SESSION_TIMEOUT = 5000;
     private final static CountDownLatch COUNT_DOWN_LATCH = new CountDownLatch(1);
@@ -46,24 +47,20 @@ public class ZkSet {
     }
 
     /**
-     * 同步更新
+     * 同步删除
      */
     @Test
-    public void zkSetTest1() throws KeeperException, InterruptedException {
-        zooKeeper.setData("/set/node1", "node11".getBytes(), 0);
+    public void deleteTest1() throws KeeperException, InterruptedException {
+        zooKeeper.delete("/delete/node1", 0);
     }
 
+
     /**
-     * 异步更新
+     * 异步删除
      */
     @Test
-    public void zkSetTest2() throws KeeperException, InterruptedException {
-        zooKeeper.setData("/set/node2", "node2".getBytes(), 0, new AsyncCallback.StatCallback() {
-            @Override
-            public void processResult(int rc, String path, Object ctx, Stat stat) {
-                // 讲道理，要判空
-                System.out.println(rc + " " + path + " " + stat.getVersion() + " " + ctx);
-            }
-        }, "I am context");
+    public void deleteTest2() {
+        zooKeeper.delete("/delete/node2", 0, (rc, path, ctx) ->
+                System.out.println(rc + " " + path + " " + ctx), "I am context");
     }
 }

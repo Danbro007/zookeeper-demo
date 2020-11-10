@@ -1,3 +1,5 @@
+package javaApiTest;
+
 import org.apache.zookeeper.KeeperException;
 import org.apache.zookeeper.WatchedEvent;
 import org.apache.zookeeper.Watcher;
@@ -11,7 +13,7 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @Classname EventTypeTest
+ * @Classname javaApiTest.EventTypeTest
  * @Description TODO
  * @Date 2020/11/9 14:51
  * @Author Danrbo

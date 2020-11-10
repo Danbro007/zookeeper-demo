@@ -1,10 +1,12 @@
+package javaApiTest;
+
 import org.apache.zookeeper.KeeperException;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @Classname LockTest
+ * @Classname javaApiTest.LockTest
  * @Description TODO
  * @Date 2020/11/9 20:18
  * @Author Danrbo

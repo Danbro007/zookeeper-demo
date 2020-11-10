@@ -1,3 +1,5 @@
+package javaApiTest;
+
 import org.apache.zookeeper.*;
 import org.apache.zookeeper.data.Stat;
 import org.junit.After;
@@ -10,7 +12,7 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @Classname ZkGet
+ * @Classname javaApiTest.ZkGet
  * @Description TODO
  * @Date 2020/11/9 13:04
  * @Author Danrbo

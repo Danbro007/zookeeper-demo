@@ -1,10 +1,12 @@
+package javaApiTest;
+
 import org.apache.zookeeper.*;
 
 import java.io.IOException;
 import java.util.concurrent.CountDownLatch;
 
 /**
- * @Classname GloballyUniqueId
+ * @Classname javaApiTest.GloballyUniqueId
  * @Description TODO 使用 Zookeeper 来实现分布式唯一 ID
  * @Date 2020/11/9 16:32
  * @Author Danrbo

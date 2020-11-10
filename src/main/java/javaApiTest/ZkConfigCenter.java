@@ -1,3 +1,5 @@
+package javaApiTest;
+
 import lombok.Data;
 import lombok.SneakyThrows;
 import org.apache.zookeeper.KeeperException;
@@ -10,7 +12,7 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @Classname ZkConfigCenter
+ * @Classname javaApiTest.ZkConfigCenter
  * @Description TODO 使用 Zookeeper 来实现配置中心的配置实现更新
  * @Date 2020/11/9 15:32
  * @Author Danrbo

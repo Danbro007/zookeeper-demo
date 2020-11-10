@@ -1,3 +1,5 @@
+package javaApiTest;
+
 import org.apache.zookeeper.*;
 import org.apache.zookeeper.data.ACL;
 import org.apache.zookeeper.data.Id;
@@ -12,7 +14,7 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @Classname ZkCreate
+ * @Classname javaApiTest.ZkCreate
  * @Description TODO
  * <p>
  * Zookeeper 结点创建测试

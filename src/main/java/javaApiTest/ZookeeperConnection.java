@@ -1,3 +1,5 @@
+package javaApiTest;
+
 import org.apache.zookeeper.Watcher;
 import org.apache.zookeeper.ZooKeeper;
 
